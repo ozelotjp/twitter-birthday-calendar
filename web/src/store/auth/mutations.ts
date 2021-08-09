@@ -5,6 +5,7 @@ import { AuthStateInterface } from './state';
 const mutation: MutationTree<AuthStateInterface> = {
   updateUser(state, user: User | null){
     state.user = user;
+    state.status = user === null ? 'guest' : 'user'
   }
 };
 

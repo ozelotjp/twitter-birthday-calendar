@@ -1,10 +1,5 @@
 <template>
-  <q-btn
-    color="primary"
-    :icon="showIcon ? 'eva-twitter' : undefined"
-    no-caps
-    @click="signInWithTwitter"
-  >
+  <q-btn color="primary" no-caps @click="signInWithTwitter">
     {{ text }}
   </q-btn>
 </template>
@@ -20,11 +15,6 @@ export default defineComponent({
       required: false,
       default: 'Twitterでログイン'
     },
-    showIcon: {
-      type: Boolean,
-      required: false,
-      default: false
-    }
   },
   setup(){
     const signInWithTwitter = async () => {

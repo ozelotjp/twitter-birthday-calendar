@@ -11,15 +11,10 @@ const firebaseConfig = {
     appId: '1:554535526636:web:246f7e21e37f36fc0a45c9'
 }
 
-const getAuthenticatedUser = async () => {
-  return new Promise((resolve) => {
-    onAuthStateChanged(getAuth(), (user) => resolve(user))
-  })
-}
-
-export default boot(async ({store}) => {
+export default boot(({store}) => {
   initializeApp(firebaseConfig);
 
-  const user = await getAuthenticatedUser();
-  store.commit('auth/updateUser', user);
+  onAuthStateChanged(getAuth(), (user) => {
+    store.commit('auth/updateUser', user)
+  })
 })

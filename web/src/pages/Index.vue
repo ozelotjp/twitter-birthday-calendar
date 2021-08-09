@@ -1,18 +1,5 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <!-- <q-card class="text-center">
-      <q-card-section>
-        まずはTwitterでログインしてください
-      </q-card-section>
-      <q-card-section>
-        <q-btn
-          icon="eva-twitter"
-          no-caps
-        >
-          Twitterでログイン
-        </q-btn>
-      </q-card-section>
-    </q-card> -->
     <div class="q-pa-md row items-start q-gutter-md">
       <q-card class="my-card">
         <img src="https://cdn.quasar.dev/img/mountains.jpg" />
