@@ -3,9 +3,7 @@ import { StateInterface } from '../index';
 import { AuthStateInterface } from './state';
 
 const getters: GetterTree<AuthStateInterface, StateInterface> = {
-  someAction (/* context */) {
-    // your code
-  }
+  //
 };
 
 export default getters;

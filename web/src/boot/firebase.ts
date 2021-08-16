@@ -1,3 +1,4 @@
+import {Loading} from 'quasar'
 import { boot } from 'quasar/wrappers';
 import { initializeApp } from 'firebase/app'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
@@ -14,7 +15,9 @@ const firebaseConfig = {
 export default boot(({store}) => {
   initializeApp(firebaseConfig);
 
+  Loading.show();
   onAuthStateChanged(getAuth(), (user) => {
     store.commit('auth/updateUser', user)
+    Loading.hide();
   })
 })

@@ -25,20 +25,20 @@
 
         <div class="q-gutter-sm row items-center no-wrap">
           <btn-twitter-login v-if="loginStatus === 'guest'" />
-          <q-btn-dropdown round flat v-if="loginStatus === 'user'">
-            <template #label>
-              <q-avatar>
-                <img :src="photoURL" />
-              </q-avatar>
-            </template>
-            <q-list>
-              <q-item clickable>
-                <q-item-section>
-                  <q-item-label>ログアウト</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </q-btn-dropdown>
+          <q-btn round flat v-if="loginStatus === 'user'">
+            <q-avatar rounded>
+              <img :src="photoURL" />
+            </q-avatar>
+            <q-menu>
+              <q-list>
+                <q-item clickable>
+                  <q-item-section>
+                    <q-item-label>ログアウト</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
         </div>
       </q-toolbar>
     </q-header>

@@ -21,10 +21,26 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, watch } from 'vue';
+import { useRouter } from 'vue-router';
+
 import BtnTwitterLogin from 'src/components/Btn/BtnTwitterLogin.vue';
-import { defineComponent } from 'vue';
+import { useStore } from 'src/store';
 
 export default defineComponent({
   components: { BtnTwitterLogin },
+  setup() {
+    const store = useStore();
+    const router = useRouter();
+
+    watch(
+      () => store.state.auth.status,
+      (status) => {
+        if (status === 'user') {
+          void router.push('/follow');
+        }
+      }
+    );
+  },
 });
 </script>
