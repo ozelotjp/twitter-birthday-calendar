@@ -10,21 +10,21 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.10.10",
-    "core-js": "^3.16.1",
+    "@quasar/extras": "^1.10.11",
+    "core-js": "^3.16.2",
     "dayjs": "^1.10.6",
     "firebase": "^9.0.0-beta.6",
-    "quasar": "^2.0.3",
+    "quasar": "^2.0.4",
     "vue-i18n": "^9.0.0-beta.0",
     "vuex": "^4.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.0",
-    "@quasar/app": "^3.0.4",
+    "@quasar/app": "^3.1.0",
     "@quasar/quasar-app-extension-qcalendar": "^4.0.0-beta.3",
-    "@types/node": "^16.6.0",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
-    "@typescript-eslint/parser": "^4.29.1",
+    "@types/node": "^16.7.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.16.0"
