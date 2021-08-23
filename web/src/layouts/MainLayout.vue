@@ -109,8 +109,7 @@ export default {
     const links = computed(() => {
       if (loginStatus.value !== 'user') return [];
       return [
-        { icon: 'eva-list', text: 'フォロー', to: 'follow' },
-        { icon: 'eva-list', text: 'フォロワー', to: 'follower' },
+        { icon: 'eva-calendar', text: 'カレンダー', to: 'home' },
         { icon: 'eva-settings', text: '設定', to: 'settings' },
       ];
     });

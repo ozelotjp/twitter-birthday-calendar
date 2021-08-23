@@ -6,6 +6,7 @@
           <div class="title q-calendar__ellipsis">
             {{ event.title + (event.time ? ' - ' + event.time : '') }}
             <q-tooltip>{{ event.details }}</q-tooltip>
+            {{ timestamp }}
           </div>
         </template>
       </template>
@@ -15,11 +16,7 @@
 
 <script lang="ts">
 import { computed } from 'vue';
-import {
-  QCalendarMonth,
-  parseDate,
-  parseTimestamp,
-} from '@quasar/quasar-ui-qcalendar';
+import { QCalendarMonth } from '@quasar/quasar-ui-qcalendar';
 
 export default {
   components: { QCalendarMonth },
@@ -27,7 +24,7 @@ export default {
     const events = [
       {
         title: '@ozelotjp',
-        date: parseDate(new Date('2021-08-10'))?.date,
+        date: firestore.Timestamp.now(),
         bgcolor: 'orange',
       },
     ];
@@ -35,11 +32,10 @@ export default {
     const eventsMap = computed(() => {
       const map = {};
       events.forEach((event) => {
-        const date: string = event.date ?? '';
-        if (map[!!date ? date : 'null'] === undefined) {
-          map[!!date ? date : 'null'] = [];
+        if (map['aaa'] === undefined) {
+          map['aaa'] = [];
         }
-        map[!!date ? date : 'null'].push(event);
+        map['aaa'].push(event);
       });
       return map;
     });

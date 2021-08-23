@@ -37,7 +37,7 @@ export default defineComponent({
       () => store.state.auth.status,
       (status) => {
         if (status === 'user') {
-          void router.push('/follow');
+          void router.push('/home');
         }
       }
     );
